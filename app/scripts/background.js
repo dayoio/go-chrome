@@ -7,6 +7,6 @@ chrome.webRequest.onBeforeRequest.addListener(
   {
     urls: [
       "http://*/videos/other/*",
-      "http://msg.71.am/cp2.gif*",
+      "http://msg.71.am/cp2.gif*"
     ]
   }, ['blocking']);

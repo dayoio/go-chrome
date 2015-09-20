@@ -1,31 +1,22 @@
 (function (document) {
-  var f = document.getElementById('flash');
-  var c = document.getElementsByClassName('act_shares')[0].childNodes[1];
-  var o = document.getElementsByClassName('code-input fl')[1];
-  f.data = '';
-
-  var css = '.videoWindow_cover { width:0; height:0; display:none;} .zongyi-rightList { display:none;} body.qypage-1180 .play-zongyiWrap .zongyiVideo, body.qypage-1440 .play-zongyiWrap .zongyiVideo, .play-zongyiWrap .zongyiVideo { float: none; margin: 0 auto;}';
-
-  var style = document.createElement('style');
-  style.type = 'text/css';
-
-  if (style.styleSheet) {
-    style.styleSheet.cssText = css;
-  } else {
-    style.appendChild(document.createTextNode(css));
-  }
-
-  document.head.appendChild(style);
-
-  var s = setInterval(function () {
-    c.click();
-    console.log(o.value);
-    if (o.value !== "") {
-      f.data = o.value;
-      c.click();
-      clearInterval(s);
+  var player = document.getElementById('flash');
+  var flashVars = document.getElementsByName("flashVars")[0];
+  var params = flashVars.value.split("&");
+  var value = "";
+  for (var i = 0; i < params.length; i++) {
+    if (params[i].indexOf("definitionID") == 0 ||
+      params[i].indexOf("menu") == 0 ||
+      params[i].indexOf("autoplay") == 0 ||
+      params[i].indexOf("tvId") == 0
+    ) {
+      if (value != "") value += "&";
+      value += params[i];
+    } else if (params[i].indexOf("flashP2PCoreUrl") == 0) {
+      value += "&flashP2PCoreUrl=http://www.iqiyi.com/common/flashplayer/20150512/30037.swf"
+    } else if (params[i].indexOf("cid") == 0) {
+      value += "&cid=qc_100001_100100"
     }
-  }, 1000);
-
-
+  }
+  flashVars.value = value + "&menu=false";
+  player.data = player.data + "?rd=" + Math.random();
 })(document)
