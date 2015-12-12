@@ -13,13 +13,13 @@
       if (value != "") value += "&";
       value += params[i];
     } else if (params[i].indexOf("flashP2PCoreUrl") == 0) {
-      value += "&flashP2PCoreUrl=http://www.iqiyi.com/common/flashplayer/20150512/30037.swf"
+      value += "&flashP2PCoreUrl=http://www.iqiyi.com/common/flashplayer/20151027/3020.swf"
     } else if (params[i].indexOf("cid") == 0) {
       value += "&cid=qc_100001_100100"
     }
   }
   flashVars.value = value + "&menu=false";
-  player.data = "http://www.iqiyi.com/common/flashplayer/20151027/MainPlayer_5_2_28_3_c3_3_7_7.swf?r=" + Math.random();
+  player.data = "http://www.iqiyi.com/common/flashplayer/20151209/MainPlayer_5_2_30_c3_3_8_1.swf?r=" + Math.random();
 
   var embed = document.createElement('embed');
     embed.setAttribute("align", "middle");
