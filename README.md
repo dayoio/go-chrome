@@ -7,5 +7,3 @@
 [Chrome Web Store](https://chrome.google.com/webstore/detail/go/ekikfhjmenpabkldholjipapdognkicp)
 
 ## 已知错误
-
-- debug版本的flash player无法播放
