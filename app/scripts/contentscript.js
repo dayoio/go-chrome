@@ -4,7 +4,7 @@
   var definitionId = flashbox.getAttribute('data-player-videoid')
   var tvId = flashbox.getAttribute('data-player-tvid')
   container.removeChild(flashbox)
-  var src = 'http://www.iqiyi.com/common/flashplayer/20170406/1556f98c2359.swf?menu=false&autoplay=true&cid=qc_100001_100100&flashP2PCoreUrl=http://www.iqiyi.com/common/flashplayer/20170406/15562a1b82aa.swf&=undefined&&definitionID=' + definitionId + '&tvId=' + tvId + '&isPurchase=0&cnId=4&coop=ugc_openapi_wanyouwang&cid=qc_100001_300089&bd=1&autoChainPlay=1&showRecommend=0&source=&purl=&autoplay=true'
+  var src = 'http://www.iqiyi.com/common/flashplayer/20170406/1556f98c2359.swf?menu=false&autoplay=true&cid=qc_100001_100100&flashP2PCoreUrl=http://www.iqiyi.com/common/flashplayer/20170406/15562a1b82aa.swf&=undefined&&definitionID=' + definitionId + '&tvId=' + tvId + '&isPurchase=0&cnId=4&coop=ugc_openapi_wanyouwang&cid=qc_100001_300089&bd=1&autoChainPlay=1&showRecommend=0&source=&purl='
 
   //
   var ifrm = document.createElement('iframe')

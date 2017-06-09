@@ -8,6 +8,11 @@
         "128": "images/icon-128.png"
     },
     "default_locale": "zh_CN",
+    "background": {
+        "scripts": [
+            "scripts/background.js"
+        ]
+    },
     "content_scripts": [
         {
             "js": [
@@ -25,6 +30,10 @@
         "16": "images/icon-16.png"
       }
     },
-    "permissions": [],
+    "permissions": [
+      "webRequest",
+      "webRequestBlocking",
+      "<all_urls>"
+    ],
     "web_accessible_resources": []
 }
